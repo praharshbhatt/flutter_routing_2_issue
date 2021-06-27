@@ -1,0 +1,15 @@
+//
+//  production.xcconfig
+//  Runner
+//
+//  Created by Maysam Shahsavari on 2021-05-12.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Generated.xcconfig"
+#inclode "../Pods/Target Support Files/Pods-Runner/Pods-Runner.release-production.xcconfig"
+
+FLUTTER_TARGET=lib/main_production.dart
+APP_BUNDLE_ID = com.dakiadigital.hypr.tribes20
+APP_NAME = HT2 Prod

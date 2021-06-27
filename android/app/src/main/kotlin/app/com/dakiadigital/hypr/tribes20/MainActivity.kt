@@ -1,4 +1,4 @@
-package com.dakiadigital.hypr.tribes20
+package com.dakiadigital.hypribes20
 
 import io.flutter.embedding.android.FlutterActivity
 

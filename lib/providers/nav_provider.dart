@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 import '../routing/route_names.dart';
 import '../routing/router.dart';
@@ -61,22 +60,22 @@ class NavProvider extends ChangeNotifier {
 final Map<String, NavTab> globalNavigationTabs = {
   RouteNames.discoverTabRoute: NavTab(
     rootName: RouteNames.discoverTabRoute,
-    label: 'discovery'.tr,
+    label: 'discovery',
     icon: const Icon(Icons.home),
   ),
   RouteNames.tribesTabRoute: NavTab(
     rootName: RouteNames.tribesTabRoute,
-    label: 'tribes'.tr,
+    label: 'tribes',
     icon: const Icon(Icons.collections),
   ),
   RouteNames.musicTabRoute: NavTab(
     rootName: RouteNames.musicTabRoute,
-    label: 'music'.tr,
+    label: 'music',
     icon: const Icon(Icons.music_note),
   ),
   RouteNames.movementsTabRoute: NavTab(
     rootName: RouteNames.movementsTabRoute,
-    label: 'movements'.tr,
+    label: 'movements',
     icon: const Icon(Icons.add),
   ),
 };

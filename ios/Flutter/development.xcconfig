@@ -10,5 +10,5 @@
 #include "Generated.xcconfig"
 #include "../Pods/Target Support Files/Pods-Runner/Pods-Runner.release-development.xcconfig"
 FLUTTER_TARGET=lib/main_development.dart
-APP_BUNDLE_ID = com.dakiadigital.hypr.tribes20.dev
+APP_BUNDLE_ID = com.dakiadigital.hypribes20.dev
 APP_NAME = HT2 Dev

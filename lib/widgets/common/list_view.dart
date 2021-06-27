@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../utils/color.dart';
 import '../../utils/font.dart';
@@ -113,7 +112,7 @@ class _TribesListViewState extends State<TribesListView> {
                     ? Row(
                         children: [
                           Text(
-                            'seeAll'.tr,
+                            'seeAll',
                             style: seeAllTextStyle,
                           ),
                           const SizedBox(

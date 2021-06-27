@@ -77,7 +77,7 @@ class RouteNames {
       //         )
       //       : UnknownPage();
       //
-      // case RouteNames.tribe:
+      // case RouteNamesibe:
       //   return (parameter1 != null)
       //       ? CupertinoPage(
       //           key: ValueKey(routeName),

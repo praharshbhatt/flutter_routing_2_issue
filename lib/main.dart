@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-
-import 'internationalization/messages.dart';
 import 'providers/nav_provider.dart';
 import 'routing/router.dart';
 import 'services/service_locator.dart';
@@ -38,12 +35,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
 
-    return GetMaterialApp.router(
-      translations: Messages(),
-      //Get.deviceLocale
-      locale: const Locale('en', 'US'),
-      //default language
-      fallbackLocale: const Locale('en', 'US'),
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Routing 2.0',
       theme: ThemeData(

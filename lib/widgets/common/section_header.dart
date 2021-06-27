@@ -1,7 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 import '../../utils/font.dart';
 import '../../utils/text_style.dart';
 
@@ -26,7 +24,7 @@ Widget sectionHeader(String text, {bool isFirst = false, bool seeAll = true}) {
               ? Row(
             children: [
               Text(
-                'seeAll'.tr,
+                'seeAll',
                 style: seeAllTextStyle,
               ),
               const SizedBox(

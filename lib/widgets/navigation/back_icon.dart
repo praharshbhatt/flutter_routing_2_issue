@@ -32,7 +32,6 @@ class BackIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      behavior: HitTestBehavior.translucent,
       child: Padding(
         padding: _padding,
         child: Image.asset(

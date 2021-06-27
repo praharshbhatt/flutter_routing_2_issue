@@ -139,7 +139,7 @@ mixin MaterialRouteTransitionMixin<T> on PageRoute<T> {
 /// top rather than horizontally.
 ///
 /// The type `T` specifies the return type of the route which can be supplied as
-/// the route is popped from the stack via [Navigator.transitionDelegate] by
+/// the route is popped from the stack via [NavigatoransitionDelegate] by
 /// providing the optional `result` argument to the
 /// [RouteTransitionRecord.markForPop] in the [TransitionDelegate.resolve].
 ///

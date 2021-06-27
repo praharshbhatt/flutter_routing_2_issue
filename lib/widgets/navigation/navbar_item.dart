@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 
 import '../../utils/color.dart';
 
@@ -89,7 +88,7 @@ class NavBarItem extends StatelessWidget {
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-              hintText: 'search'.tr,
+              hintText: 'search',
               hintStyle: const TextStyle(color: Colors.white),
             ),
           ),

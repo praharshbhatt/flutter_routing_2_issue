@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:tribes/utils/font.dart';
 
 import '../../../utils/color.dart';
@@ -71,21 +70,21 @@ class _HyprDrawerState extends State<HyprDrawer> {
                   ],
                 ),
                 const Divider(color: Colors.white),
-                DrawerItem(title: 'messages'.tr, pngAsset: 'assets/images/icons/icon_messages.png'),
+                DrawerItem(title: 'messages', pngAsset: 'assets/images/icons/icon_messages.png'),
                 const Divider(color: Colors.white),
-                DrawerItem(title: 'videos'.tr, pngAsset: 'assets/images/icons/icon_videos.png'),
+                DrawerItem(title: 'videos', pngAsset: 'assets/images/icons/icon_videos.png'),
                 const Divider(color: Colors.white),
-                DrawerItem(title: 'movements'.tr, pngAsset: 'assets/images/icons/icon_movements.png',),
+                DrawerItem(title: 'movements', pngAsset: 'assets/images/icons/icon_movements.png',),
                 const Divider(color: Colors.white),
-                DrawerItem(title: 'challenges'.tr, pngAsset: 'assets/images/icons/icon_challenges.png',),
+                DrawerItem(title: 'challenges', pngAsset: 'assets/images/icons/icon_challenges.png',),
                 const Divider(color: Colors.white),
-                DrawerItem(title: 'settings'.tr, pngAsset: 'assets/images/icons/icon_settings.png',),
+                DrawerItem(title: 'settings', pngAsset: 'assets/images/icons/icon_settings.png',),
                 const Divider(color: Colors.white),
-                DrawerItem(title: 'inviteFriends'.tr, pngAsset: 'assets/images/icons/icon_invite_friend.png'),
+                DrawerItem(title: 'inviteFriends', pngAsset: 'assets/images/icons/icon_invite_friend.png'),
                 const Divider(color: Colors.white),
-                DrawerItem(title: 'appInfo'.tr, pngAsset: 'assets/images/icons/icon_appInfo.png',),
+                DrawerItem(title: 'appInfo', pngAsset: 'assets/images/icons/icon_appInfo.png',),
                 const Divider(color: Colors.white),
-                DrawerItem(title: 'logout'.tr, pngAsset: 'assets/images/icons/icon_logout.png'),
+                DrawerItem(title: 'logout', pngAsset: 'assets/images/icons/icon_logout.png'),
               ],
             ),
           ),

@@ -2,14 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tribes/routing/router.dart';
 import 'package:tribes/services/service_locator.dart';
-import 'package:tribes/widgets/navigation/hyper_drawer.dart';
 
 import '../providers/nav_provider.dart';
-import '../utils/color.dart';
-import '../utils/font.dart';
-import '../widgets/device.dart';
-import '../widgets/navigation/drawer/hypr_drawer.dart';
-import '../widgets/navigation/hypr_navigation_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage(this.tabIndex, this.screen);
@@ -27,23 +21,8 @@ class HomePage extends StatelessWidget {
           onWillPop: () async => provider.onWillPop(context),
           // Bottom Nav And/Or App Bar to be owned by this scaffold..
           child: Scaffold(
-            drawer: const HyprDrawer(),
             body: Column(
               children: [
-                Visibility(
-                  visible: _screenSize.width > 800,
-                  child: Container(
-                    decoration: const BoxDecoration(color: topAppBarBackground),
-                    child: HyperNavBar(
-                      tabMenu: HyprAppBarTabMenu(
-                        currentTab: provider.tabs[tabIndex].label,
-                        items: provider.tabs,
-                        onSelectTab: (tabName) => provider.setTab(tabName),
-                      ),
-                    ),
-                  ),
-                ),
-                //Flexible(child: screen),
                 Flexible(
                   child: Center(
                     child: Text(
@@ -51,24 +30,30 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
+                BottomNavigationBar(
+                  selectedItemColor: Color.fromRGBO(0, 76, 186, 1),
+                  unselectedItemColor: Color.fromRGBO(136, 136, 136, 1),
+                  selectedLabelStyle: TextStyle(
+                    fontSize: 12,
+                    color: Color.fromRGBO(0, 76, 186, 1),
+                    fontWeight: FontWeight.normal,
+                  ),
+                  unselectedLabelStyle: TextStyle(
+                    fontSize: 12,
+                    color: Color.fromRGBO(136, 136, 136, 1),
+                    fontWeight: FontWeight.normal,
+                  ),
+                  backgroundColor: Color.fromRGBO(1, 0, 25, 1),
+                  type: BottomNavigationBarType.fixed,
+                  onTap: (index) => provider.setTabIndex(index),
+                  currentIndex: tabIndex,
+                  items: provider.tabs
+                      .map((navTab) => BottomNavigationBarItem(
+                          label: navTab.label, icon: navTab.icon))
+                      .toList(),
+                ),
               ],
             ),
-            bottomNavigationBar: getScreenType(context) == DeviceType.phone
-                ? BottomNavigationBar(
-                    selectedItemColor: themeBlue,
-                    unselectedItemColor: themeMediumDarkGrey,
-                    selectedLabelStyle: selectedLabelStyle,
-                    unselectedLabelStyle: unselectedLabelStyle,
-                    backgroundColor: themeDarkBlue,
-                    type: BottomNavigationBarType.fixed,
-                    onTap: (index) => provider.setTabIndex(index),
-                    currentIndex: tabIndex,
-                    items: provider.tabs
-                        .map((navTab) => BottomNavigationBarItem(
-                            label: navTab.label, icon: navTab.icon))
-                        .toList(),
-                  )
-                : null,
           ),
         );
       },

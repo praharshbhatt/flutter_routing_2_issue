@@ -1,31 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../utils/color.dart';
-
 class TribesPage extends StatelessWidget {
+  const TribesPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: themeBackgroundGradient,
-        ),
-        child: _returnBody(context),
-      ),
-    );
+    return Center(child: Text('Movements Page'));
   }
-
-  Widget _returnBody(BuildContext context) => Scaffold(
-        body: Center(
-            child: GestureDetector(
-          onTap: () => {Navigator.pop(context)},
-          child: const Text(
-            'Tribes Page',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
-          ),
-        )),
-      );
 }

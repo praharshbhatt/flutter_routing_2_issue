@@ -6,7 +6,6 @@ import 'package:tribes/pages/music_page.dart';
 import 'package:tribes/pages/tribes_page.dart';
 import '../pages/home_page.dart';
 import '../pages/unknown_page.dart';
-import 'no_animation_page.dart';
 
 class RouteNames {
   //Lowest level routes
@@ -46,25 +45,25 @@ class RouteNames {
     switch (routeName) {
       case '/':
       case RouteNames.discoverTabRoute:
-        return NoAnimationPage(
+        return MaterialPage(
           key: const ValueKey(RouteNames.discoverTabRoute),
           child: HomePage(0, DiscoveryPage()),
         );
 
       case RouteNames.tribesTabRoute:
-        return NoAnimationPage(
+        return MaterialPage(
           key: const ValueKey(RouteNames.tribesTabRoute),
           child: HomePage(1, TribesPage()),
         );
 
       case RouteNames.musicTabRoute:
-        return NoAnimationPage(
+        return MaterialPage(
           key: const ValueKey(RouteNames.musicTabRoute),
           child: HomePage(2, MusicPage()),
         );
 
       case RouteNames.movementsTabRoute:
-        return NoAnimationPage(
+        return MaterialPage(
           key: const ValueKey(RouteNames.movementsTabRoute),
           child: HomePage(3, MovementsPage()),
         );

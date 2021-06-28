@@ -1,38 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tribes/routing/route_names.dart';
-import 'package:tribes/routing/router.dart';
-import 'package:tribes/services/service_locator.dart';
-
-import '../utils/color.dart';
 
 class MovementsPage extends StatelessWidget {
+  const MovementsPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: themeBackgroundGradient,
-        ),
-        child: _returnBody(context),
-      ),
-    );
+    return Center(child: Text('Movements Page'));
   }
-
-  Widget _returnBody(BuildContext context) => Scaffold(
-        body: Center(
-            child: GestureDetector(
-          onTap: () {
-            locator<AppRouterDelegate>()
-                .goToSimplePage(RouteNames.discoverTabRoute);
-            //Navigator.pushNamed(context, 'home');
-          },
-          child: const Text(
-            'Movements Page',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
-          ),
-        )),
-      );
 }
